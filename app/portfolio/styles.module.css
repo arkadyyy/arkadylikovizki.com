@@ -1,0 +1,33 @@
+/* Hide scrollbar for Chrome, Safari, Edge */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollContainer {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.scrollContainer::after {
+  content: "";
+  display: inline-block;
+  width: 40px; /* spacing at the end */
+  height: 1px; /* keeps it visible */
+}
+
+@media screen and (max-width: 768px) {
+  .scrollContainer::after {
+    width: 100px;
+  }
+}
