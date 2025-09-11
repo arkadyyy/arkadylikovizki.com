@@ -1,18 +1,27 @@
 import React from "react";
 import styles from "./circle.module.css";
 
-const Circle = (props: {
+type CircleProps = {
   size?: string;
   left?: string;
   right?: string;
   top?: string;
   bottom?: string;
-}) => {
+};
+
+const Circle = ({ size, left, right, top, bottom }: CircleProps) => {
   return (
     <div
-      style={{ width: props.size, height: props.size, ...props }}
+      style={{
+        width: size,
+        height: size,
+        left,
+        right,
+        top,
+        bottom,
+      }}
       className={`${styles.blurred_circle} absolute`}
-    ></div>
+    />
   );
 };
 

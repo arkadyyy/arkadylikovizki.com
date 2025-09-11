@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fafafa;
-  --foreground: #171717;
+  /* --background: #fafafa;
+  --foreground: #171717; */
+  --background: #222222;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -34,6 +36,23 @@ h4,
 p {
   font-family: var(--font-jakarta);
   /* font-weight: 200; */
+}
+
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  body {
+    position: relative;
+
+    /* Lock the container to the viewport size */
+    width: 100vw;
+    height: 100vh;
+
+    /* Hide any overflow within this container */
+    overflow: hidden;
+
+    /* Prevent overscroll behavior on mobile */
+    overscroll-behavior: none;
+  }
 }
 
 @keyframes fadeIn {

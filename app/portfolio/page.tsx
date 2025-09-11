@@ -24,10 +24,10 @@ function Portfolio() {
   }, []);
 
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <ul
         ref={ref}
-        className={`md:h-full h-screen md:w-full w-full overflow-x-auto whitespace-nowrap no-scrollbar fixed z-10 pt-10 md:pt-4 md:px-4 md:pr-10 ${styles.scrollContainer}`}
+        className={` md:h-full h-screen md:w-full w-full overflow-x-auto whitespace-nowrap no-scrollbar fixed z-10 pt-10 md:pt-4 md:px-4 md:pr-10 ${styles.scrollContainer}`}
       >
         {[1, 2, 3, 4, 5].map((item, index) => (
           <Card key={item + index} animationDelay={index} />
@@ -37,11 +37,6 @@ function Portfolio() {
       {/* <ClientCircle right="54%" top="26%" size="1024px" /> */}
       {/* <ClientCircle right="2%" top="6%" size="1024px" /> */}
       {/* <ClientCircle right="26%" top="-30%" size="1024px" /> */}
-      {/* bg circles */}
-      <Circle right="54%" top="16%" size="480px" />
-      <Circle right="20%" top="44%" size="480px" />
-      <Circle right="-30%" top="50%" size="480px" />
-      <Circle right="-10%" top="60%" size="344px" />
     </div>
   );
 }
