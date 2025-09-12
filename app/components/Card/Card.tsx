@@ -17,9 +17,7 @@ function Card({
   const isMobile = useIsMobile();
   const [cardRef, isCentered] = useCenterIntersection(rootRef);
 
-  const activeOnMobileCard = `${
-    isMobile && isCentered ? "glowing_element_mobile" : ""
-  }`;
+  const activeOnMobileCard = `${isCentered ? "glowing_element_mobile" : ""}`;
 
   return (
     <li
@@ -27,7 +25,6 @@ function Card({
       style={{ animationDelay: `${777 + animationDelay * 200}ms` }}
       className={`relative inline-block mr-2 md:mr-6 h-5/6 w-92 md:w-100 2xl:w-xl lg:w-lg  md:h-[80%] rounded-xl shadow-lg  overflow-hidden drop-shadow-md ${styles.card} ${styles.activeOnMobileCard}  `}
     >
-      {activeOnMobileCard && <h2>asd</h2>}
       {/* background layer */}
       {/* <div
         style={{

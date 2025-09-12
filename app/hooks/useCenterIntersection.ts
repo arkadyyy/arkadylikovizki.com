@@ -17,7 +17,7 @@ const useCenterIntersection = (rootElementRef: RefObject<HTMLElement>) => {
       {
         root: rootElementRef.current, // Use the passed-in scroll container as the root
         rootMargin: "0px -50% 0px -50%", // Create a horizontal line in the middle of the root
-        threshold: 0.1, // A small threshold can be more reliable
+        threshold: 1, // A small threshold can be more reliable
       }
     );
 
