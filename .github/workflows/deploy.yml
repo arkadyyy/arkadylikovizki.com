@@ -24,5 +24,7 @@ jobs:
             # Add any other commands needed to restart your application
             # For example:
             npm install
+            rm -rf .next
+            npm run build
             pm2 restart portfolio
             echo "Deployment complete."
