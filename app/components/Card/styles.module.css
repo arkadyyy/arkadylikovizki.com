@@ -36,8 +36,31 @@
     rgba(175, 209, 6, 0.5) 0%,
     transparent 70%
   );
+
   opacity: 0; /* Hidden by default */
   transition: opacity 0.3s ease-in-out;
+
+  animation: animateBlob 8s ease-in-out infinite alternate;
+  pointer-events: none; /* Prevents the glowing element from interfering with mouse events on the container */
+  animation: morphing 10s ease-in-out infinite alternate,
+    floating 12s ease-in-out infinite, moving 15s ease-in-out infinite alternate; /* New animation for movement */
+}
+.glowing_element_mobile {
+  position: absolute;
+  bottom: -333;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  background: radial-gradient(
+    circle,
+    rgba(175, 209, 6, 0.5) 0%,
+    transparent 70%
+  );
+
+  opacity: 0; /* Hidden by default */
+  animation: mobileOpacity 0.8s ease-in;
+
   animation: animateBlob 8s ease-in-out infinite alternate;
   pointer-events: none; /* Prevents the glowing element from interfering with mouse events on the container */
   animation: morphing 10s ease-in-out infinite alternate,
@@ -50,6 +73,21 @@
 }
 .card:hover .glowing_element {
   opacity: 1; /* Show on hover */
+}
+
+@media (max-width: 768px) {
+  .card:hover .glowing_element {
+    opacity: 0; /** cancel hover animation on mobile devices*/
+  }
+}
+
+@keyframes mobileOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {

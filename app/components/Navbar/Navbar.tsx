@@ -9,7 +9,7 @@ import LeftNavContent from "./LeftNavContent";
 
 const Navbar = (params: {}) => {
   return (
-    <nav className="flex justify-between items-center h-20 mb-6 md:mb-0 p-4 md:p-0 ">
+    <nav className="flex justify-between items-center h-20 md:mb-0 p-1 md:p-0 ">
       <div>
         <LeftNavContent />
       </div>

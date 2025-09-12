@@ -27,12 +27,12 @@ function ScrollAction() {
 
   return (
     <Link
-      className={`absolute bottom-50 cursor-pointer  ${
+      className={`absolute bottom-40 md:bottom-50 cursor-pointer  ${
         animate ? "animate-bounce" : ""
       }`}
       href={"/portfolio"}
     >
-      <Image src={scroll_down} alt="scroll down" />
+      <Image src={scroll_down} alt="scroll down" className="w-16 md:w-22" />
     </Link>
   );
 }

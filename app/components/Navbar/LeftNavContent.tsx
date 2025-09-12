@@ -10,8 +10,10 @@ export default function LeftNavContent() {
   if (pathname === "/portfolio")
     return (
       <Link href={"/"} className="mb-4">
-        <h1 className="font-jakarta font-bold text-[1.2rem]">Arkady</h1>
-        <h1 className="font-jakarta font-bold text-[1.2rem] leading-2 relative">
+        <h1 className="font-jakarta font-bold text-2xl md:text-[1.2rem]">
+          Arkady
+        </h1>
+        <h1 className="font-jakarta font-bold text-2xl md:text-[1.2rem] leading-2 relative">
           Likovizki
         </h1>
       </Link>
