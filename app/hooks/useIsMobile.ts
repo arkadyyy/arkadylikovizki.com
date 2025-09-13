@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 
 const useIsMobile = (query = "(max-width: 768px)") => {
   // 1. Initialize state with the result of the media query check.
@@ -23,7 +23,7 @@ const useIsMobile = (query = "(max-width: 768px)") => {
     const mediaQueryList = window.matchMedia(query);
 
     // The event handler to run when the media query's status changes.
-    const listener = (event) => {
+    const listener = (event: MediaQueryListEvent) => {
       setIsMobile(event.matches);
     };
 
